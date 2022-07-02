@@ -9,3 +9,6 @@ setup-test-db:
 
 cleanup-test-db:
 	docker rm -f test-db
+
+migrate:
+	@python3 -m main -p examples/ -d postgres://test:test@localhost:5433/test

@@ -1,9 +1,6 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - "v*.*.*"
   release:
     types:
       - published
@@ -35,7 +32,6 @@ jobs:
           twine check dist/*
       
       - name: Upload packages to PyPi
-        if: github.event.action == 'published'
         uses: pypa/gh-action-pypi-publish@master
         with:
           user: __token__

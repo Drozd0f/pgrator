@@ -11,7 +11,7 @@ def sql_file_picker(directorie: str) -> list[tuple[str, list[str]]]:
 
 
 setup(
-    name='migrator',
+    name='pgrate',
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     author='Drozd0f, qerdcv',
@@ -27,7 +27,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'migrator=migrator.main:main'
+            'pgrate=migrator.main:main'
         ]
     },
     classifiers=[

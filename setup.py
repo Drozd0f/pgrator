@@ -12,6 +12,7 @@ def sql_file_picker(directorie: str) -> list[tuple[str, list[str]]]:
 
 setup(
     name='pgrate',
+    description='Package for applying migrations to the postgresql database',
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     author='Drozd0f, qerdcv',
@@ -32,6 +33,11 @@ setup(
     },
     classifiers=[
         "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: Unix",
-    ]
+    ],
+    project_urls={
+        'Homepage': 'https://github.com/Drozd0f/migrator',
+        'Bug Tracker': 'https://github.com/Drozd0f/migrator/issues'
+    }
 )

@@ -2,7 +2,7 @@ import os
 import asyncio
 from argparse import ArgumentParser
 
-from src.db import make_migration
+from migrator.src.db import make_migration
 
 
 def main():

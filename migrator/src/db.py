@@ -1,4 +1,3 @@
-import os
 import logging
 import typing as t
 from pathlib import Path
@@ -6,10 +5,10 @@ from pathlib import Path
 import asyncpg
 from asyncpg import Connection
 
-from src.utils import parse_migration_number, get_migration_paths
+from migrator.src.utils import parse_migration_number, get_migration_paths
 
 
-QUERIES_DIR = Path(f'{os.getcwd()}/queries/pathlib')
+QUERIES_DIR = Path(Path(__file__).parent.parent / 'queries/pathlib')
 DB_CONNECTION: t.Optional[asyncpg.Connection] = None
 log = logging.getLogger(__name__)
 
